@@ -1,0 +1,21 @@
+{
+  "auth": {
+    "owner": [
+      "581188531372949506",
+      "315861094100893696",
+      "352814794295869450"
+    ],
+    "developper": [
+      "581188531372949506"
+    ]
+  },
+
+  "setting": {
+    "prefix": "+ "
+  },
+
+  "bot": {
+    "id": "816832721145430016",
+    "invite": "https://discord.com/oauth2/authorize?client_id=816832721145430016&scope=bot&permissions=1074129985"
+  }
+}

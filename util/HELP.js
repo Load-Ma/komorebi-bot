@@ -29,6 +29,47 @@ const COMMANDS = {
             args: "none"
         }
     },
+    MODERATION: {
+        BAN: {
+            name: "ban",
+            aliases: [],
+            category: "moderation",
+            descriptionEn: "ban a user",
+            descriptionFr: "bannir un utilisateur",
+            usageEn: "<user>",
+            usageFr: "<utilisateur>",
+            cooldown: 0,
+            permissions: "",
+            auth: "",
+            args: "true"
+        },
+        KICK: {
+            name: "kick",
+            aliases: [],
+            category: "moderation",
+            descriptionEn: "kick a user",
+            descriptionFr: "expulser un utilisateur",
+            usageEn: "<user>",
+            usageFr: "<utilisateur>",
+            cooldown: 0,
+            permissions: "",
+            auth: "",
+            args: "true"
+        },
+        UNBAN: {
+            name: "unban",
+            aliases: [],
+            category: "moderation",
+            descriptionEn: "unban a user",
+            descriptionFr: "débannir un utilisateur",
+            usageEn: "<user>",
+            usageFr: "<utilisateur>",
+            cooldown: 0,
+            permissions: "",
+            auth: "",
+            args: "true"
+        }
+    },
     OWNER: {
         EVAL: {
             name:"eval",

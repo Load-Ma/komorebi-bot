@@ -9,7 +9,7 @@ let prefix = config.setting.prefix;
 module.exports.run = (bot, message, args) => {
     if(!args.length) {
         const embed = new MessageEmbed()
-            .setColor(bot.randomHexColor())
+            .setColor("#ffa500")
         embed.setDescription(`Prefix : \`${prefix}\` \nPour obtenir l'utilisation d'une commande \`${prefix}help <nom commande>\``)
         for (const category of categoryList) {
             if (bot.config.auth.owner.includes(message.author.id)){

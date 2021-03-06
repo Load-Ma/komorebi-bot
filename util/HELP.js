@@ -1,5 +1,8 @@
 const COMMANDS = {
     DEVELOPPER: {
+        ADMINISTRATOR: {
+
+        },
         PING: {
             name: "ping",
             aliases: ["ckeck"],
@@ -12,6 +15,44 @@ const COMMANDS = {
             permissions: "",
             auth: "owner",
             args: "false"
+        },
+        EVAL: {
+            name:"eval",
+            category: "owner",
+            descriptionEn: "Execute JavaScript with bot",
+            descriptionFr: "Exécuter du JavaScript depuis le bot",
+            usageEn: "<JS lines>",
+            usageFr: "<lignes de JS>",
+            permissions: "",
+            cooldown: 3,
+            auth: "dev",
+            args: "true"
+        },
+        EXEC: {
+            name:"exec",
+            aliases:['execute'],
+            category: "owner",
+            descriptionEn: "Execute Linux commands from the bot",
+            descriptionFr: "Executer des commandes Linux depuis le bot",
+            usageEn: "<linux command>",
+            usageFr: "<commande linux>",
+            permissions: "",
+            cooldown: 3,
+            auth: "dev",
+            args: "true"
+        },
+        RELOAD: {
+            name: "reload",
+            aliases: ["rl"],
+            category: "owner",
+            descriptionEn: "Reload a command",
+            descriptionFr: "Reload une commande",
+            usageEn: "<command>",
+            usageFr: "<commande>",
+            permissions: "",
+            cooldown: 3,
+            auth: "dev",
+            args: "true"
         },
     },
     MISC: {
@@ -69,46 +110,6 @@ const COMMANDS = {
             auth: "",
             args: "true"
         }
-    },
-    OWNER: {
-        EVAL: {
-            name:"eval",
-            category: "owner",
-            descriptionEn: "Execute JavaScript with bot",
-            descriptionFr: "Exécuter du JavaScript depuis le bot",
-            usageEn: "<JS lines>",
-            usageFr: "<lignes de JS>",
-            permissions: "",
-            cooldown: 3,
-            auth: "dev",
-            args: "true"
-        },
-        EXEC: {
-            name:"exec",
-            aliases:['execute'],
-            category: "owner",
-            descriptionEn: "Execute Linux commands from the bot",
-            descriptionFr: "Executer des commandes Linux depuis le bot",
-            usageEn: "<linux command>",
-            usageFr: "<commande linux>",
-            permissions: "",
-            cooldown: 3,
-            auth: "dev",
-            args: "true"
-        },
-        RELOAD: {
-            name: "reload",
-            aliases: ["rl"],
-            category: "owner",
-            descriptionEn: "Reload a command",
-            descriptionFr: "Reload une commande",
-            usageEn: "<command>",
-            usageFr: "<commande>",
-            permissions: "",
-            cooldown: 3,
-            auth: "dev",
-            args: "true"
-        },
     },
 }
 

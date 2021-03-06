@@ -1,7 +1,7 @@
 const COMMANDS = {
     ADMINISTRATOR: {
-        SETWELCOMECHANNEL:{
-            name: "setWelcomeChannel",
+        SETWELCOMECHANNEL: {
+            name: "setwelcomechannel",
             aliases: ["setwc"],
             category: "administrator",
             descriptionEn: "set the welcome channel",

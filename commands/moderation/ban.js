@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 const { COMMANDS } = require('../../util/HELP');
 
-module.exports.run = (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
     const user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(x => x.user.username.toLowerCase() === args.slice(0).join(" ") || x.user.username === args[0]);
     const reason = (args.splice(1).join(' '));
 
@@ -19,8 +19,7 @@ module.exports.run = (bot, message, args) => {
     const log_channel = bot.channels.cache.get('756188861272424482');
     log_channel.send(LogBanEmbed);
 
-
-    user ? user.ban({ reason:reason }) && message.channel.send(`L'utilisateur <@${user.id}> a été ban`) : message.channel.send("L'utilisateur est introuvable");
+    await user.ban({ reason:reason }) && message.channel.send(`L'utilisateur <@${user.id}> a été ban`);
 };
 
 

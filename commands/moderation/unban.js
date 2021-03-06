@@ -4,7 +4,6 @@ const { COMMANDS } = require('../../util/HELP');
 module.exports.run = async (bot, message, args) => {
     const user = await bot.users.fetch(args[0]);
     if(!user) return message.channel.send("L'utilisateur est introuvable");
-    await message.guild.members.unban(user)
 
     const embed = new MessageEmbed()
         .setAuthor(`${user.username} (${user.id})`, user.avatarURL())
@@ -14,6 +13,8 @@ module.exports.run = async (bot, message, args) => {
         .setFooter(message.author.username, message.author.avatarURL());
     const log_channel = bot.channels.cache.get('756188861272424482');
     log_channel.send(embed);
+
+    await message.guild.members.unban(user) && message.channel.send(`L'utilisateur <@${user.id}> a été unban`);
 };
 
 

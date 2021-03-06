@@ -10,7 +10,7 @@ module.exports = async (bot, message) => {
     const command = bot.commands.get(commandName) || bot.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(commandName));
     if(!command) return;
 
-    //Check if it's Administrator/dev command
+    //Check if it's owner/dev command
     if(command.help.auth === "owner" && !bot.config.auth.owner.includes(message.author.id)){
         return message.channel.send("You can't use that command");
     } else if (command.help.auth === "dev" && !bot.config.auth.developper.includes(message.author.id)){

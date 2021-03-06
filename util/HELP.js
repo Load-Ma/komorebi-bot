@@ -18,7 +18,7 @@ const COMMANDS = {
         },
         EVAL: {
             name:"eval",
-            category: "owner",
+            category: "developper",
             descriptionEn: "Execute JavaScript with bot",
             descriptionFr: "Exécuter du JavaScript depuis le bot",
             usageEn: "<JS lines>",
@@ -31,7 +31,7 @@ const COMMANDS = {
         EXEC: {
             name:"exec",
             aliases:['execute'],
-            category: "owner",
+            category: "developper",
             descriptionEn: "Execute Linux commands from the bot",
             descriptionFr: "Executer des commandes Linux depuis le bot",
             usageEn: "<linux command>",
@@ -44,7 +44,7 @@ const COMMANDS = {
         RELOAD: {
             name: "reload",
             aliases: ["rl"],
-            category: "owner",
+            category: "developper",
             descriptionEn: "Reload a command",
             descriptionFr: "Reload une commande",
             usageEn: "<command>",

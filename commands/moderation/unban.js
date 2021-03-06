@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 const { COMMANDS } = require('../../util/HELP');
 
 module.exports.run = async (bot, message, args) => {
-    const user = await bot.users.fetch(args[0]);
+    const user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(x => x.user.username.toLowerCase() === args.slice(0).join(" ") || x.user.username === args[0]);
     if(!user) return message.channel.send("L'utilisateur est introuvable");
 
     const embed = new MessageEmbed()

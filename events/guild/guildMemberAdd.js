@@ -2,7 +2,6 @@ const { MessageEmbed, MessageAttachment } = require('discord.js');
 
 module.exports = (bot, member) => {
     const img = new MessageAttachment('./images/Logo_Komorebi_JP.png')
-    console.log(member)
 
     const joinEmbed = new MessageEmbed()
         .setAuthor("Bienvenue sur 𝗙𝗖 𝗞𝗼𝗺𝗼𝗿𝗲𝗯𝗶™", 'attachment://Logo_Komorebi_JP.png')

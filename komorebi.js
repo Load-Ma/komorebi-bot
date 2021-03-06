@@ -34,13 +34,10 @@ class Komorebi extends Client {
             const events = readdirSync(`${dir}/${dirs}/`).filter(files => files.endsWith(".js"));
 
             for (const event of events) {
-                if (dirs == "client") {
-                    const evt = require(`${dir}/${dirs}/${event}`);
-                    const evtName = event.split(".")[0];
-                    this.on(evtName, evt.bind(null, this));
-                    console.log(`Event loaded : ${evtName}`);
-                }
-
+                const evt = require(`${dir}/${dirs}/${event}`);
+                const evtName = event.split(".")[0];
+                this.on(evtName, evt.bind(null, this));
+                console.log(`Event loaded : ${evtName}`);
             }
         });
     };

@@ -1,8 +1,20 @@
 const COMMANDS = {
-    DEVELOPPER: {
-        ADMINISTRATOR: {
-
+    ADMINISTRATOR: {
+        SETWELCOMECHANNEL:{
+            name: "setWelcomeChannel",
+            aliases: ["setwc"],
+            category: "administrator",
+            descriptionEn: "set the welcome channel",
+            descriptionFr: "Définir le salon de bienvenue",
+            usageEn: "<channel-id>",
+            usageFr: "<id-salon>",
+            cooldown: 10,
+            permissions: "",
+            auth: "owner",
+            args: "false"
         },
+    },
+    DEVELOPPER: {
         PING: {
             name: "ping",
             aliases: ["ckeck"],

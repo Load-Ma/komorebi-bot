@@ -11,7 +11,7 @@ const COMMANDS = {
             cooldown: 10,
             permissions: "",
             auth: "owner",
-            args: "false"
+            args: "true"
         },
     },
     DEVELOPPER: {

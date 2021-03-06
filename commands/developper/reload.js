@@ -32,4 +32,4 @@ module.exports.run = async (bot, message, args) => {
 
 }
 
-module.exports.help = COMMANDS.OWNER.RELOAD;
+module.exports.help = COMMANDS.DEVELOPPER.RELOAD;

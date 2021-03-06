@@ -22,4 +22,4 @@ module.exports.run = async (bot, message, args) => {
         });
 }
 
-module.exports.help = COMMANDS.OWNER.EXEC;
+module.exports.help = COMMANDS.DEVELOPPER.EXEC;

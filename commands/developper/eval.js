@@ -30,4 +30,4 @@ module.exports.run = async (bot, message, args) => {
 
 }
 
-module.exports.help = COMMANDS.OWNER.EVAL;
+module.exports.help = COMMANDS.DEVELOPPER.EVAL;

@@ -9,7 +9,7 @@ let prefix = config.setting.prefix;
 module.exports.run = (bot, message, args) => {
     if(!args.length) {
         const embed = new MessageEmbed()
-            .setColor("#ffa500")
+            .setColor('#bb1f1f')
         embed.setDescription(`Prefix : \`${prefix}\` \nPour obtenir l'utilisation d'une commande \`${prefix}help <nom commande>\``)
         for (const category of categoryList) {
             if (bot.config.auth.owner.includes(message.author.id)){
@@ -37,7 +37,7 @@ module.exports.run = (bot, message, args) => {
         if (!command) return message.reply("Commande introuvable");
 
         const embed = new MessageEmbed()
-            .setColor(bot.randomHexColor())
+            .setColor('#bb1f1f')
             .setTitle(`\`${command.help.name}\``)
         if (command.help.aliases) embed.addField("Alias", `${command.help.aliases.join(', ')}`)
         embed.addField("Description", `${command.help.descriptionFr}`)

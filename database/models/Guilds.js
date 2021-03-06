@@ -24,6 +24,14 @@ module.exports = async (Sequelize, db, bot) => {
                 mod_log_chan: {
                     type: Sequelize.STRING(25),
                     allowNull: true
+                },
+                enable_welcome: {
+                    type: Sequelize.BOOLEAN,
+                    defaultValue: false,
+                },
+                welcome_chan: {
+                    type: Sequelize.STRING(25),
+                    allowNull: true
                 }
             },
             {

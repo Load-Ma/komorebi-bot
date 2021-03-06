@@ -6,8 +6,6 @@ module.exports = async (bot, message) => {
     const args = message.content.slice(bot.config.setting.prefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();
 
-    // qsdfsdf
-
     //aliases
     const command = bot.commands.get(commandName) || bot.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(commandName));
     if(!command) return;

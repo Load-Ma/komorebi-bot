@@ -5,10 +5,6 @@ module.exports = async (Sequelize, db, bot) => {
                     type: Sequelize.STRING(25),
                     allowNull: false
                 },
-                prefix: {
-                    type: Sequelize.STRING(10),
-                    defaultValue: bot.config.setting.prefix,
-                },
                 enable_msg_log: {
                     type: Sequelize.BOOLEAN,
                     defaultValue: false,

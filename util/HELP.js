@@ -105,8 +105,8 @@ const COMMANDS = {
             usageEn: "<user>",
             usageFr: "<utilisateur>",
             cooldown: 0,
-            permissions: "",
-            auth: "BAN_MEMBERS",
+            permissions: "BAN_MEMBERS",
+            auth: "",
             args: "true"
         },
         KICK: {

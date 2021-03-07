@@ -28,6 +28,14 @@ module.exports = async (Sequelize, db, bot) => {
                 welcome_chan: {
                     type: Sequelize.STRING(25),
                     allowNull: true
+                },
+                enable_leave: {
+                    type: Sequelize.BOOLEAN,
+                    defaultValue: false,
+                },
+                leave_chan: {
+                    type: Sequelize.STRING(25),
+                    allowNull: true
                 }
             },
             {

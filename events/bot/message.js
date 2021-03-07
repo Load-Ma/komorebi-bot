@@ -17,6 +17,13 @@ module.exports = async (bot, message) => {
         return message.channel.send("You can't use that command");
     }
 
+    // Permissions
+    if (command.help.permissions) {
+        if (!message.guild.member(message.author).hasPermission(command.help.permissions)){
+            return message.channel.send("Tu n'as pas la permission d'utiliser cette commande");
+        }
+    }
+
     //Check if args needed
     if (command.help.args === "true" && !args.length){
         let noArgsReply = `Cette commande nécessite un argument.`;
@@ -50,9 +57,6 @@ module.exports = async (bot, message) => {
 
     tStamps.set(message.author.id, timeNow);
     setTimeout(() => tStamps.delete(message.author.id), cdAmount);
-
-    //DataBase guild search
-    // LATER
 
     command.run(bot, message, args);
 }

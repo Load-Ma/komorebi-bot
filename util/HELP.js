@@ -106,7 +106,7 @@ const COMMANDS = {
             usageFr: "<utilisateur>",
             cooldown: 0,
             permissions: "",
-            auth: "",
+            auth: "BAN_MEMBERS",
             args: "true"
         },
         KICK: {
@@ -118,7 +118,7 @@ const COMMANDS = {
             usageEn: "<user>",
             usageFr: "<utilisateur>",
             cooldown: 0,
-            permissions: "",
+            permissions: "KICK_MEMBERS",
             auth: "",
             args: "true"
         },
@@ -131,7 +131,7 @@ const COMMANDS = {
             usageEn: "<user>",
             usageFr: "<utilisateur>",
             cooldown: 0,
-            permissions: "",
+            permissions: "BAN_MEMBERS",
             auth: "",
             args: "true"
         }

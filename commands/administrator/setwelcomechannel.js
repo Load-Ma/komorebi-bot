@@ -3,7 +3,6 @@ const { COMMANDS } = require('../../util/HELP');
 
 module.exports.run = async (bot, message, args) => {
     const channelId =  message.mentions.channels.first() || message.guild.channels.cache.get(args[0]).id;
-    console.log(channelId)
     const data = await bot.db.models.guilds.findOne({
         where: {
             guildID: message.guild.id

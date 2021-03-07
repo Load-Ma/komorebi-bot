@@ -1,18 +1,5 @@
 const COMMANDS = {
     ADMINISTRATOR: {
-        SETWELCOMECHANNEL: {
-            name: "setwelcomechannel",
-            aliases: ["setwc"],
-            category: "administrator",
-            descriptionEn: "set the welcome channel",
-            descriptionFr: "Définir le salon de bienvenue",
-            usageEn: "<off/channel-id>",
-            usageFr: "<off/id-salon>",
-            cooldown: 10,
-            permissions: "",
-            auth: "owner",
-            args: "true"
-        },
         SETLEAVECHANNEL: {
             name: "setleavechannel",
             aliases: ["setlc"],
@@ -26,6 +13,32 @@ const COMMANDS = {
             auth: "owner",
             args: "true"
         },
+        SETWELCOMECHANNEL: {
+            name: "setwelcomechannel",
+            aliases: ["setwc"],
+            category: "administrator",
+            descriptionEn: "set the welcome channel",
+            descriptionFr: "Définir le salon de bienvenue",
+            usageEn: "<off/channel-id>",
+            usageFr: "<off/id-salon>",
+            cooldown: 10,
+            permissions: "",
+            auth: "owner",
+            args: "true"
+        },
+        WHITELIST: {
+            name: "whitelist",
+            aliases: ["wl"],
+            category: "administrator",
+            descriptionEn: "show/add/remove whitelisted users",
+            descriptionFr: "montre/ajoute/retire les utilisateurs whitelist",
+            usageEn: "<add/remove> <user ID>",
+            usageFr: "<add/remove> <ID utilisateur>",
+            cooldown: 5,
+            permissions: "",
+            auth: "owner",
+            args: "none"
+        }
     },
     DEVELOPPER: {
         EVAL: {

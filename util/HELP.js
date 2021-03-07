@@ -15,19 +15,6 @@ const COMMANDS = {
         },
     },
     DEVELOPPER: {
-        PING: {
-            name: "ping",
-            aliases: ["ckeck"],
-            category: "developper",
-            descriptionEn: "check if bot is online",
-            descriptionFr: "Vérifier que le bot est en ligne",
-            usageEn: "",
-            usageFr: "",
-            cooldown: 10,
-            permissions: "",
-            auth: "owner",
-            args: "false"
-        },
         EVAL: {
             name:"eval",
             category: "developper",
@@ -52,6 +39,32 @@ const COMMANDS = {
             cooldown: 3,
             auth: "dev",
             args: "true"
+        },
+        PING: {
+            name: "ping",
+            aliases: ["ckeck"],
+            category: "developper",
+            descriptionEn: "check if bot is online",
+            descriptionFr: "Vérifier que le bot est en ligne",
+            usageEn: "",
+            usageFr: "",
+            cooldown: 10,
+            permissions: "",
+            auth: "owner",
+            args: "false"
+        },
+        REBOOT: {
+            name: "reboot",
+            aliases: ["jeteredemarrefdp"],
+            category: "developper",
+            descriptionEn: "reboot the bot",
+            descriptionFr: "redémarrer le bot",
+            usageEn: "",
+            usageFr: "",
+            cooldown: 10,
+            permissions: "",
+            auth: "dev",
+            args: "false"
         },
         RELOAD: {
             name: "reload",

@@ -13,6 +13,19 @@ const COMMANDS = {
             auth: "owner",
             args: "true"
         },
+        SETLEAVECHANNEL: {
+            name: "setleavechannel",
+            aliases: ["setlc"],
+            category: "administrator",
+            descriptionEn: "set the leave channel",
+            descriptionFr: "Définir le salon de d'au revoir",
+            usageEn: "<off/channel-id>",
+            usageFr: "<off/id-salon>",
+            cooldown: 10,
+            permissions: "",
+            auth: "owner",
+            args: "true"
+        },
     },
     DEVELOPPER: {
         EVAL: {

@@ -3,7 +3,7 @@ const {COMMANDS} = require("../../util/HELP");
 module.exports.run = async (bot, message, args) => {
 
     const content = message.content.split(" ").slice(1).join(" ");
-    const result = new Promise(async (resolve) => resolve(eval(args)));
+    const result = new Promise(async (resolve) => resolve(eval(content)));
 
     return result.then(async (output) => {
         if (typeof output !== "string") {

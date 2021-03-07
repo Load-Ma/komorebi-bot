@@ -14,8 +14,8 @@ module.exports = async ( bot, member ) => {
         .setColor('#bb1f1f')
         .setDescription(`<@${member.id}> vient de partir de la Komorebi ! :cry:\nOn est maintenant ${member.guild.memberCount}`)
         .setThumbnail(`${member.user.avatarURL()}`)
-        .setFooter('Komorebi Bot')
         .setTimestamp()
+        .setFooter('Komorebi Bot')
     const log_channel = bot.channels.cache.get(data.leave_chan);
     log_channel.send({ files: [img], embed: joinEmbed });
 }

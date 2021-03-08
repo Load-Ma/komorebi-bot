@@ -10,11 +10,18 @@ module.exports = async (bot, message) => {
     const command = bot.commands.get(commandName) || bot.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(commandName));
     if(!command) return;
 
-    //Check if it's owner/dev command
+    //Check if it's owner/dev/wl command
     if(command.help.auth === "owner" && !bot.config.auth.owner.includes(message.author.id)){
         return message.channel.send("You can't use that command");
     } else if (command.help.auth === "dev" && !bot.config.auth.developper.includes(message.author.id)){
         return message.channel.send("You can't use that command");
+    } else if (command.help.auth === "wl") {
+        const data = await bot.db.models.user_whitelist.findOne({
+            where: {
+                userID: message.author.id
+            }
+        });
+        if (!data) return message.channel.send("You can't use that command");
     }
 
     // Permissions

@@ -10,7 +10,7 @@ const COMMANDS = {
             usageFr: "<off/id-salon>",
             cooldown: 10,
             permissions: "",
-            auth: "owner",
+            auth: "wl",
             args: "true"
         },
         SETWELCOMECHANNEL: {
@@ -23,7 +23,7 @@ const COMMANDS = {
             usageFr: "<off/id-salon>",
             cooldown: 10,
             permissions: "",
-            auth: "owner",
+            auth: "wl",
             args: "true"
         },
         WHITELIST: {

@@ -12,9 +12,9 @@ module.exports.run = async (bot, message, args) => {
         const embed = new MessageEmbed()
             .setColor("#49FF00")
             .setTitle(`Whitelist user`)
-        embed.setDescription(`Voici tous les utilisateurs de la whitelist\n\n` + wlList
+        embed.setDescription(`Voici tous les utilisateurs de la whitelist\n` + wlList
             .filter(x => bot.users.cache.get(x.userID))
-            .map((x, i) => (i + 1) +". "+ `${bot.users.cache.get(x.userID).toString()}`)
+            .map((x, i) => "\n"  + (i + 1) +". "+ `${bot.users.cache.get(x.userID).toString()}`)
         )
         rand === 1 ? embed.setFooter(`💛 Heureuse`) : embed.setFooter(`💛 Naeko`)
         return message.channel.send(embed);

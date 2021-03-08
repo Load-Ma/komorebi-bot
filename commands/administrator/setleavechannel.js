@@ -2,7 +2,6 @@ const { MessageEmbed } = require('discord.js');
 const { COMMANDS } = require('../../util/HELP');
 
 module.exports.run = async (bot, message, args) => {
-    const channelId =  message.mentions.channels.first() || message.guild.channels.cache.get(args[0]).id;
     const data = await bot.db.models.guilds.findOne({
         where: {
             guildID: message.guild.id
@@ -15,20 +14,24 @@ module.exports.run = async (bot, message, args) => {
         if (data.enable_leave === false) return message.channel.send("Cette action est déjà désactivée")
         data.enable_leave = false;
         data.save();
-    }
-    else if (channelId) {
-        if (data.leave_chan === channelId){
-            message.channel.send("Ce salon est déjà séléctionné")
-        }
-        else{
-            data.leave_chan = channelId;
-            message.channel.send(`Le salon d'au revoir est désormais ${channelId}`)
-        }
-        data.enable_leave = true;
-        data.save();
+        message.channel.send("Le message de bienvenue a été désactivé")
     }
     else {
-        message.channel.send("Commande invalide.\nVeuillez préciser 'off' ou un 'channel'")
+        try {
+            const channelId =  message.mentions.channels.first() || message.guild.channels.cache.get(args[0]).id;
+            if (data.enable_leave === true && data.leave_chan === channelId){
+                message.channel.send("Ce salon est déjà séléctionné")
+            }
+            else{
+                data.leave_chan = channelId;
+                message.channel.send(`Le salon de bienvenue est désormais <#${channelId}>`)
+            }
+            data.enable_leave = true;
+            data.save();
+        }
+        catch (err) {
+            message.channel.send("Commande invalide.\nVeuillez préciser `off` ou un `channel`")
+        }
     }
 };
 

@@ -107,6 +107,19 @@ const COMMANDS = {
         },
     },
     MISC: {
+        AVATAR: {
+            name: "avatar",
+            aliases: ["av", "pp", "pdp"],
+            category: "misc",
+            descriptionEn: "Show user's avatar",
+            descriptionFr: "Affiche l'avatar d'un utilisateur",
+            usageEn: "[user]",
+            usageFr: "[utilisateur]",
+            cooldown: 0,
+            permissions: "",
+            auth: "",
+            args: "none"
+        },
         HELP: {
             name: "help",
             aliases: ["h"],
@@ -119,7 +132,20 @@ const COMMANDS = {
             permissions: "",
             auth: "",
             args: "none"
-        }
+        },
+        USERINFO: {
+            name: "userinfo",
+            aliases: ["ui"],
+            category: "misc",
+            descriptionEn: "Show user informations",
+            descriptionFr: "Affiche les informations d'un utilisateur",
+            usageEn: "[user]",
+            usageFr: "[utilisateur]",
+            cooldown: 0,
+            permissions: "",
+            auth: "",
+            args: "none"
+        },
     },
     MODERATION: {
         BAN: {

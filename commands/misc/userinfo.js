@@ -134,11 +134,3 @@ module.exports.run = async (bot, message, args) => {
 };
 
 module.exports.help = COMMANDS.MISC.USERINFO;
-
-
-/*
-Partie User
-
-Partie Member
-son/ses grade
-*/
